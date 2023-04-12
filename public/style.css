@@ -18,30 +18,30 @@
   max-width: 1em;
 }
 
+.resright {
+    float: right;
+    text-align: center;
+}
+
 body {
-    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    font: 20px/1.5 Arial, Helvetica, sans-serif;
     margin: auto;
-    padding: 8px;
+    padding: 20px;
     max-width: 800px;
     background-color: var(--darkbg);
     color: var(--fg);
 }
 
 header {
-    margin-bottom: 10px;
-    font-size: 15pt;
+    font-size: 18pt;
 }
 header h1 {
-    color: var(--fg);
+    color: chocolate;
 }
 
 footer {
     text-align: center;
-    margin-top: 10px;
-}
-
-main {
-    padding: 1em
+    padding-top: 50px;
 }
 
 h1{

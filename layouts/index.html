@@ -1,19 +1,10 @@
 {{ define "main" }}
-    <figure class="resright">
-        <img src="/pictures/fern.jpg" height="300" title="Plant">
-        <figcaption>Not Holden</figcaption>
-    </figure>
-    <p>Welcome to my website!</p>
-    <ul>
-        <li><a href="/gear">Gear</a></li>
-        <li><a href="/gear">Software</a></li>
-        <li><a href="https://github.com/holdenthomas">Github</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
-    <h2>Posts</h2>
-    <ul>
-        {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
+    <img class="profpic" src="/pictures/fern.jpg" height="250" title="Plant">
+    <h1>Welcome to my website!</h1>
+    <ul class="mainnav">
+        <li><a href="">Git</a>
+        <li><a href="">Gear</a>
+        <li><a href="">Cripto</a>
+        <li><a href="">About</a>
     </ul>
 {{ end }}

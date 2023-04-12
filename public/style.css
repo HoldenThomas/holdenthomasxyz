@@ -1,12 +1,83 @@
-:root {
+:root{
     --lightbg: #222222;
     --darkbg: #111111;
-    --fg: #ffffff;
+    --fg: #fff;
     --linkfg: #99a2ff;
     --linkHoverfg: #bbbbbb;
     --altcolor: rgba(0, 0, 0, 0.4);
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: var(--darkbg);
+    color: var(--fg);
+    text-decoration: none;
+}
+body{
+    margin: auto;
+    max-width: 800px;
+}
+nav{
+   width: 85%; 
+   margin: auto;
+   padding: 35px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+header h1{
+    color: chocolate;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+}
+nav ul li a{
+    text-transform: uppercase;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: sandybrown;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+main{
+    margin: 10px 20px;
+}
+main::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.profpic{
+    border-radius: 50%;
+    float: right;
+}
+.mainnav li{
+    margin: 5px;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+}
+a{
+    color: var(--linkfg);
+}
+footer{
+    text-align: center;
+}
 .crypto {
   font-size: small;
   overflow-wrap: break-word;
@@ -16,42 +87,4 @@
 .emoji {
   max-height: 1em;
   max-width: 1em;
-}
-
-.resright {
-    float: right;
-    text-align: center;
-}
-
-body {
-    font: 20px/1.5 Arial, Helvetica, sans-serif;
-    margin: auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: var(--darkbg);
-    color: var(--fg);
-}
-
-header {
-    font-size: 18pt;
-}
-header h1 {
-    color: chocolate;
-}
-
-footer {
-    text-align: center;
-    padding-top: 50px;
-}
-
-h1{
-    text-align: center;
-}
-
-a {
-    color: var(--linkfg);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--fg);
 }

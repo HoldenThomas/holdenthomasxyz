@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>crypto on Holden&#39;s Website</title>
+    <link>http://holdenthomas.xyz/tags/crypto/</link>
+    <description>Recent content in crypto on Holden&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jun 2023 15:46:51 -0400</lastBuildDate><atom:link href="http://holdenthomas.xyz/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crypto</title>
+      <link>http://holdenthomas.xyz/posts/crypto/</link>
+      <pubDate>Thu, 15 Jun 2023 15:46:51 -0400</pubDate>
+      
+      <guid>http://holdenthomas.xyz/posts/crypto/</guid>
+      <description>Monero: 463vDRADjxQD9fZB84KjX79W7s8NddshFK8jPPE5a57v72amiiT4VG8KGAuykZpwz6NbJSqFVD5YBFDhexw9XNS9PGsfakx
+Bitcoin: bc1qaqyswd86xuwh5kfhxtkvpsctwhvqx52asaqy7a</description>
+    </item>
+    
+  </channel>
+</rss>

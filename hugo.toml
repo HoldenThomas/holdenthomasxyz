@@ -16,6 +16,8 @@ theme = "PaperMod"
     ShowWordCount = true
     ShowRssButtonInSectionTermList = true
     showtoc = true
+    [params.assets]
+        favicon = '<link rel="shortcut icon" /favicon.ico" type="image/xicon" />'
     [params.cover]
         linkFullImages = true
     [params.homeInfoParams]
@@ -26,6 +28,9 @@ Random website created by someone named Holden, idk?"""
     [[params.socialIcons]]
         name = "github"
         url = "https://github.com/holdenthomas"
+    [[params.socialIcons]]
+        name = "rss"
+        url = "index.xml"
 
 [menu]
     [[menu.main]]

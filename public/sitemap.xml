@@ -2,28 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://holdenthomas.xyz/posts/archinstall/</loc>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
+  </url><url>
     <loc>http://holdenthomas.xyz/categories/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/tags/computer/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
+  </url><url>
+    <loc>http://holdenthomas.xyz/tags/linux/</loc>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/posts/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/tags/software/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
-  </url><url>
-    <loc>http://holdenthomas.xyz/posts/software/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/tags/</loc>
-    <lastmod>2023-06-15T04:59:59-04:00</lastmod>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/categories/tech/</loc>
+    <lastmod>2023-06-15T16:04:09-04:00</lastmod>
+  </url><url>
+    <loc>http://holdenthomas.xyz/tags/crypto/</loc>
+    <lastmod>2023-06-15T15:46:51-04:00</lastmod>
+  </url><url>
+    <loc>http://holdenthomas.xyz/posts/crypto/</loc>
+    <lastmod>2023-06-15T15:46:51-04:00</lastmod>
+  </url><url>
+    <loc>http://holdenthomas.xyz/posts/software/</loc>
     <lastmod>2023-06-15T04:59:59-04:00</lastmod>
   </url><url>
     <loc>http://holdenthomas.xyz/tags/gear/</loc>

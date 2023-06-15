@@ -19,8 +19,10 @@ theme = "PaperMod"
     [params.cover]
         linkFullImages = true
     [params.homeInfoParams]
-        title = "Hey, what's up"
-        content = "Welcome to my website! Just some random stuff here."
+        title = "Hey, What's Up"
+        content = """Welcome to my website! Just some stuff here.
+
+Random website created by someone named Holden, idk?"""
     [[params.socialIcons]]
         name = "github"
         url = "https://github.com/holdenthomas"

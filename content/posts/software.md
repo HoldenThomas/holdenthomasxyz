@@ -2,13 +2,16 @@
 title: "Software"
 date: 2023-06-15T04:59:59-04:00
 draft: false
+tags: ["software","computer"]
+categories: ["tech"]
 ---
-## Software
+# Software That I Use
 - OS
     - Windows
     - Arch Linux
     - Lineage OS
-    - TrueNas
+    - Graphene OS
+    - TrueNas Scale
 - WM
     - i3 + i3bar
     - DWM + DWMBlocks

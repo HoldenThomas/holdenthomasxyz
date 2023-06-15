@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Holden&#39;s Website</title>
+    <link>http://holdenthomas.xyz/posts/</link>
+    <description>Recent content in Posts on Holden&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jun 2023 04:59:59 -0400</lastBuildDate><atom:link href="http://holdenthomas.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software</title>
+      <link>http://holdenthomas.xyz/posts/software/</link>
+      <pubDate>Thu, 15 Jun 2023 04:59:59 -0400</pubDate>
+      
+      <guid>http://holdenthomas.xyz/posts/software/</guid>
+      <description>Software That I Use OS Windows Arch Linux Lineage OS Graphene OS TrueNas Scale WM i3 + i3bar DWM + DWMBlocks Terminal ST Alacritty Shell ZSH Text Editor NeoVim Browser Brave Menu Dmenu Media Player MPV VLC Image Viewer SXIV File Manager PCManFM LF Torrent QBittorrent RSS Reader Liferea Feeder Password Manager KeepassXC KeepassDX </description>
+    </item>
+    
+    <item>
+      <title>Gear</title>
+      <link>http://holdenthomas.xyz/posts/gear/</link>
+      <pubDate>Thu, 15 Jun 2023 04:57:46 -0400</pubDate>
+      
+      <guid>http://holdenthomas.xyz/posts/gear/</guid>
+      <description>Hardware That I Own PC Build CPU: Intel Core i7-10700K 3.8 GHz 8-Core Processor CPU Cooler: NZXT Kraken X62 Liquid CPU Cooler Motherboard: MSI MPG Z490 GAMING EDGE WIFI ATX LGA1200 Motherboard RAM: Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-3200 CL16 Memory SSD Samsung 860 Evo 1 TB 2.5&amp;quot; Solid State Drive HDD Seagate Barracuda Compute 8 TB 3.5&amp;quot; 5400RPM Internal Hard Drive Seagate Barracuda 3 TB 3.</description>
+    </item>
+    
+  </channel>
+</rss>

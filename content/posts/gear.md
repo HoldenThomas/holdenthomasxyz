@@ -2,9 +2,11 @@
 title: "Gear"
 date: 2023-06-15T04:57:46-04:00
 draft: false
+tags: ["hardware","gear","computer"]
+categories: ["tech"]
 ---
 
-## Hardware
+# Hardware That I Own
 ### PC Build
 - CPU: Intel Core i7-10700K 3.8 GHz 8-Core Processor
 - CPU Cooler: NZXT Kraken X62 Liquid CPU Cooler

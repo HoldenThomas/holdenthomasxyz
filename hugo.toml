@@ -17,7 +17,11 @@ theme = "PaperMod"
     ShowRssButtonInSectionTermList = true
     showtoc = true
     [params.assets]
-        favicon = '<link rel="shortcut icon" /favicon.ico" type="image/xicon" />'
+        favicon = "/favicon.ico"
+        favicon16x16 = "/favicon.ico"
+        favicon32x32 = "/favicon.ico"
+        apple_touch_icon = "/favicon.ico"
+        safari_pinned_tab = "/favicon.ico"
     [params.cover]
         linkFullImages = true
     [params.homeInfoParams]

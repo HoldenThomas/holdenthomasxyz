@@ -1,0 +1,43 @@
+baseURL = 'http://holdenthomas.xyz/'
+languageCode = 'en-us'
+title = "Holden's Website"
+theme = "PaperMod"
+
+[params]
+    keywords = ["Blog","Portfolio","PaperMod"]
+    author = ["Holden"]
+    DateFormat = "January 2, 2006"
+    defaultTheme = "auto"
+    ShowBreadCrumbs = true
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowCodeCopyButtons = true
+    ShowWordCount = true
+    ShowRssButtonInSectionTermList = true
+    showtoc = true
+    [params.cover]
+        linkFullImages = true
+    [params.homeInfoParams]
+        title = "Hey, what's up"
+        content = "Welcome to my website! Just some random stuff here."
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/holdenthomas"
+
+[menu]
+    [[menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories"
+        weight = 10
+    [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags"
+        weight = 20
+    [[menu.main]]
+        identifier = "archives"
+        name = "Archives"
+        url = "/archives"
+        weight = 30

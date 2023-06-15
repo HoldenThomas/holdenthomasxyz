@@ -1,8 +1,9 @@
 ---
 title: "Gear"
-date: 2023-04-08T22:08:03-04:00
+date: 2023-06-15T04:57:46-04:00
 draft: false
 ---
+
 ## Hardware
 ### PC Build
 - CPU: Intel Core i7-10700K 3.8 GHz 8-Core Processor
@@ -33,40 +34,3 @@ draft: false
 - Valve Index
 - ZSA Moonlander
 - Logitech G305 Mouse
-
-## Software
-- OS
-    - Windows
-    - Arch Linux
-    - Lineage OS
-    - TrueNas
-- WM
-    - i3 + i3bar
-    - DWM + DWMBlocks
-- Terminal
-    - ST
-    - Alacritty
-- Shell
-    - ZSH
-- Text Editor
-    - NeoVim
-- Browser
-    - Brave
-- Menu
-    - Dmenu
-- Media Player
-    - MPV
-    - VLC
-- Image Viewer
-    - SXIV
-- File Manager
-    - PCManFM
-    - LF
-- Torrent
-    - QBittorrent
-- RSS Reader
-    - Liferea
-    - Feeder
-- Password Manager
-    - KeepassXC
-    - KeepassDX

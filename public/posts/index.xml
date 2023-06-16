@@ -14,7 +14,11 @@
       
       <guid>http://holdenthomas.xyz/posts/archinstall/</guid>
       <description>Encrypted Arch Installation This guide will install a base arch system with a encrypted root partition.
-Coming Soon </description>
+Partition the disk.
+fdisk /dev/&amp;lt;disk&amp;gt; Encrypt root partition.
+cryptsetup luksFormat /dev/&amp;lt;root_partition&amp;gt; cryptsetup open /dev/&amp;lt;root_partition&amp;gt; &amp;lt;name&amp;gt; Create filesystem and mount partitions.
+mkfs.fat -F32 /dev/&amp;lt;boot_partition&amp;gt; mkfs.btfs /dev/&amp;lt;root_partition&amp;gt; mount /dev/&amp;lt;root_partition&amp;gt; /mnt mount --mkdir /dev/&amp;lt;boot_partition&amp;gt; /mnt/boot Install essential packages.
+pacstrap -K /mnt base base-devel linux linux-firmware man-db man-pages texinfo \ git grub efibootmgr networkmanager cryptsetup lvm2 vim neovim GPU Drivers nvidia nvidia-settings xf86-video-amdgpu xf86-video-intel CPU ucode intel-ucode amd-ucode Configure the system.</description>
     </item>
     
     <item>

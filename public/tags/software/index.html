@@ -146,9 +146,13 @@
   </header>
   <div class="entry-content">
     <p>Encrypted Arch Installation This guide will install a base arch system with a encrypted root partition.
-Coming Soon </p>
+Partition the disk.
+fdisk /dev/&lt;disk&gt; Encrypt root partition.
+cryptsetup luksFormat /dev/&lt;root_partition&gt; cryptsetup open /dev/&lt;root_partition&gt; &lt;name&gt; Create filesystem and mount partitions.
+mkfs.fat -F32 /dev/&lt;boot_partition&gt; mkfs.btfs /dev/&lt;root_partition&gt; mount /dev/&lt;root_partition&gt; /mnt mount --mkdir /dev/&lt;boot_partition&gt; /mnt/boot Install essential packages.
+pacstrap -K /mnt base base-devel linux linux-firmware man-db man-pages texinfo \ git grub efibootmgr networkmanager cryptsetup lvm2 vim neovim GPU Drivers nvidia nvidia-settings xf86-video-amdgpu xf86-video-intel CPU ucode intel-ucode amd-ucode Configure the system....</p>
   </div>
-  <footer class="entry-footer"><span title='2023-06-15 16:04:09 -0400 EDT'>June 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;18 words&nbsp;·&nbsp;Holden</footer>
+  <footer class="entry-footer"><span title='2023-06-15 16:04:09 -0400 EDT'>June 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;169 words&nbsp;·&nbsp;Holden</footer>
   <a class="entry-link" aria-label="post link to Arch Install Guide" href="http://holdenthomas.xyz/posts/archinstall/"></a>
 </article>
 

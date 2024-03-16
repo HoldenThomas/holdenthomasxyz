@@ -31,7 +31,7 @@ Mount Point	|Partition	                |Logical Volume			|Type				    |File Syst
 
 ## 1. Creating the GPT partition table
 List the available drives and create the partition table:
-```
+```bash
 lsblk
 cfdisk /dev/disk
 ```
@@ -39,38 +39,38 @@ cfdisk /dev/disk
 
 ## 2. Preparing the disk
 Create and open the LUKS encrypted container that will contain the logical volumes:
-```
+```bash
 cryptsetup luksFormat /dev/partition2
 cryptsetup open /dev/partition2 cryptlvm
 ```
 
 ## 3. Preparing the logical volumes
 Create a physical volume on top of the opened LUKS container:
-```
+```bash
 pvcreate /dev/mapper/cryptlvm
 ```
 
 Create a volume group and add the previously created physical volume to it:
-```
+```bash
 vgcreate MyVolGroup /dev/mapper/cryptlvm
 ```
 
 Create all your logical volumes on the volume group:
-```
+```bash
 lvcreate -L 8G MyVolGroup -n swap
 lvcreate -L 32G MyVolGroup -n root
 lvcreate -l 100%FREE MyVolGroup -n home
 ```
 
 Format your file systems on each logical volume:
-```
+```bash
 mkfs.btrfs /dev/MyVolGroup/root
 mkfs.btrfs /dev/MyVolGroup/home
 mkswap /dev/MyVolGroup/swap
 ```
 
 Mount your file systems:
-```
+```bash
 mount /dev/MyVolGroup/root /mnt
 mount --mkdir /dev/MyVolGroup/home /mnt/home
 swapon /dev/MyVolGroup/swap
@@ -79,7 +79,7 @@ swapon /dev/MyVolGroup/swap
 
 ## 4. Preparing the boot partition
 Create your file system for the boot partition:
-```
+```bash
 mkfs.fat -F32 /dev/sda1
 ```
 
@@ -87,18 +87,18 @@ mkfs.fat -F32 /dev/sda1
 ## 5. Configuring mkinitcpio
 Edit `/etc/mkinitcpio.conf` adding `encrypt lvm2` to HOOKS:
 ```
-HOOKS=(base udev autodetect modconf kms **keyboard** keymap consolefont block **encrypt** **lvm2** >filesystems fsck)
+HOOKS=(base udev autodetect modconf kms **keyboard** keymap consolefont block **encrypt** **lvm2** filesystems fsck)
 ```
 
 Recreate mkinitcpio:
-```
+```bash
 mkinitcpio -p
 ```
 
 
 ## 6. Configuring the boot loader (grub)
 Exit chroot to get the UUID of the disks.
-```
+```bash
 lsblk -f >> /mnt/etc/default/grub
 arch-chroot /mnt
 ```
@@ -109,6 +109,6 @@ cryptdevice=UUID=_device-UUID_:cryptlvm root=/dev/MyVolGroup/root
 ```
 
 Generate grub config:
-```
+```bash
 grub-mkconfig -o /boot/grub/grub.cfg
 ```

@@ -5,7 +5,7 @@ draft: false
 tags: ["software","computer"]
 categories: ["tech"]
 ---
-# Software That I Use
+# Software
 - OS
     - Windows
     - Arch Linux

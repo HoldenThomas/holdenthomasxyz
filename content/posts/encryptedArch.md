@@ -84,7 +84,11 @@ mkfs.fat -F32 /dev/sda1
 ```
 
 
-## 5. Configuring mkinitcpio
+## 5. Configuration during system install
+### 5.1 Packages
+Install 'cryptsetup lv2'
+
+### 5.3 Configuring mkinitcpio
 Edit `/etc/mkinitcpio.conf` adding `encrypt lvm2` to HOOKS:
 ```
 HOOKS=(base udev autodetect modconf kms **keyboard** keymap consolefont block **encrypt** **lvm2** filesystems fsck)
@@ -95,8 +99,7 @@ Recreate mkinitcpio:
 mkinitcpio -p
 ```
 
-
-## 6. Configuring the boot loader (grub)
+### 5.4 Boot loader (grub)
 Exit chroot to get the UUID of the disks.
 ```bash
 lsblk -f >> /mnt/etc/default/grub

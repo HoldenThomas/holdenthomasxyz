@@ -49,6 +49,8 @@ pacstrap -K /mnt <packages>
 - grub efibootmgr os-prober
 - networkmanager
 - vim neovim
+- Filesystem utilies
+    - btrfs-progs
 - GPU Drivers
     - nvidia nvidia-settings
     - xf86-video-amdgpu

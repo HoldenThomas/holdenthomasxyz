@@ -17,7 +17,7 @@ minify:
 params:
   #env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Holden''s Website
-  description: "ExampleSite description"
+  description: "Website created by some random dude."
   keywords: [Blog, Portfolio, PaperMod]
   author: Holden
   # author: ["Me", "You"] # multiple authors
@@ -46,14 +46,14 @@ params:
   assets:
     disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    favicon: /favicon.ico
+    favicon16x16: /favicon.ico
+    favicon32x32: /favicon.ico
+    apple_touch_icon: /favicon.ico
+    safari_pinned_tab: /favicon.ico
 
   label:
-    text: "Home"
+    text: "Holdens's Website"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -73,8 +73,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Hello, \U0001F44B"
+    Content: Welcome to my website!
 
   socialIcons:
     #- name: x
@@ -100,7 +100,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/holdenthomas/holdenthomasxyz/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -116,19 +116,29 @@ params:
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 
 menu:
   main:
     - identifier: categories
-      name: categories
+      name: Categories
       url: /categories/
       weight: 10
     - identifier: tags
-      name: tags
+      name: Tags
       url: /tags/
       weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
     - identifier: archives
-      name: archives
+      name: Archives
       url: /archives/
       weight: 30
 

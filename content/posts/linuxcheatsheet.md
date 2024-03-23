@@ -55,3 +55,9 @@ Edit /usr/lib/python3.11/site-packages/youtube_dl/extractor/youtube.py and commi
 ```
 'uploader_id': self._search_regex(r'/(?:channel|user)/([^/?&#]+)', owner_profile_url, 'uploader id') if owner_profile_url else None,
 ```
+
+## Git
+```
+git submodule update --init --recursive
+git submodule update --remote --merge
+```

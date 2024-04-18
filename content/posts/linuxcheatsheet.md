@@ -61,3 +61,30 @@ Edit /usr/lib/python3.11/site-packages/youtube_dl/extractor/youtube.py and commi
 git submodule update --init --recursive
 git submodule update --remote --merge
 ```
+
+## Intel CPU and NVidia GPU boot settings
+Edit '/etc/default/grub' and add these to GRUB_CMDLINE_LINUX_DEFAULT
+```
+intel_iommu=on
+nvidia_drm.modeset=1
+```
+
+## TTY auto login
+Edit '/etc/systemd/system/getty@tty1.service.d/autologin.conf'
+```
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin username %I $TERM
+```
+
+## Add DWM to display manager
+Edit '/usr/share/xsessions/dwm.desktop'
+```
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Dynamic window manager
+Exec=dwm
+Icon=dwm
+Type=XSession
+```

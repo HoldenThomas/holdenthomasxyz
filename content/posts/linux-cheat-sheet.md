@@ -6,6 +6,8 @@ tags: ["software","computer","linux"]
 categories: ["tech"]
 ---
 
+Some random linux stuff I would like to remember.
+
 ## Pacman
 ```bash
 pacman-key --init
@@ -48,12 +50,6 @@ Edit '/etc/cryttab' for decryption on boot
 Edit '/etc/fstab' for mounting on boot
 ```
 /dev/mapper/<name> <mountpoint> ntfs3 noauto,x-systemd.automount,uid=<user>,gid=<group> 0 0
-```
-
-## youtube-dl issues
-Edit /usr/lib/python3.11/site-packages/youtube_dl/extractor/youtube.py and commit out
-```
-'uploader_id': self._search_regex(r'/(?:channel|user)/([^/?&#]+)', owner_profile_url, 'uploader id') if owner_profile_url else None,
 ```
 
 ## Git

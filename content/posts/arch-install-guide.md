@@ -6,7 +6,9 @@ tags: ["software","computer","linux"]
 categories: ["tech"]
 ---
 
-This guide will install a base arch system with a encrypted root partition.
+This guide will install a base arch system and create a user with sudo privileges.
+
+This is a basic guide for myself to reference. For a more in-depth guide go to the [arch wiki install guide](https://wiki.archlinux.org/title/Installation_guide).
 
 ## 1. Format and Partition the disk
 ---
@@ -29,11 +31,13 @@ cfdisk /dev/disk
 ### 1.2. Create filesystem and mount partitions
 ```bash
 mkfs.fat -F32 /dev/efi_system_partition
-mkfs.btfs /dev/root_partition
-mkfs.btfs /dev/home_partition
+mkfs.btrfs /dev/root_partition
+mkfs.btrfs /dev/home_partition
 mount /dev/root_partition /mnt
 mount --mkdir /dev/efi_system_partition /mnt/boot
 mount --mkdir /dev/home_partition /mnt/home
+mkswap /dev/swap_partition
+swapon /dev/swap_partition
 ```
 
 
@@ -108,7 +112,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```bash
 useradd -m -G wheel,audio,disk,input,kvm,optical,scanner,storage,video <username>
 ```
-Edit sudoers using the command `$EDITOR=nvim visudo` and uncomment:
+Edit sudoers using the command `EDITOR=nvim visudo` and uncomment:
 ```bash
 %wheel ALL=(ALL:ALL) ALL
 ```

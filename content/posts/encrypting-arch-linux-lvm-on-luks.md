@@ -1,11 +1,13 @@
 ---
-title: "Encrypting Arch KVM on LUKS"
+title: "Encrypting Arch Linux LVM on LUKS"
 date: 2024-03-16T03:06:57-04:00
 draft: false
 tags: ["software","computer","linux"]
 categories: ["tech"]
 ---
 This guide will set up an Arch Linux system with an encrypted partition using LUKS containing logical volumes for swap, root, and home using LVM.
+
+This is a basic guide for myself to reference. For a more in-depth guide go to the LVM on Luks section in the [arch wiki encrytion guide](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS).
 
 Below is an example of the disk layout:
 ```
@@ -21,12 +23,12 @@ Below is an example of the disk layout:
 | /dev/sda1    	 ||                           /dev/sda2                                   | 
 +----------------++-----------------------------------------------------------------------+ 
 ```
-Mount Point	|Partition	                |Logical Volume			|Type				    |File System	|Size		
-------------|---------------------------|-----------------------|-----------------------|---------------|-----------
-/mnt/boot   |/dev/efi_system_partition	|none(not encrypted)	|EFI system partition	|fat32			|1G			
-[swap]		|/dev/swap_partition	    |/dev/MyVolGroup/swap	|Linux swap	            |swap			|16G		
-/mnt		|/dev/root_partition	    |/dev/MyVolGroup/root	|Linux root	            |btrfs			|200G		
-/mnt/home	|/dev/home_partition	    |/dev/MyVolGroup/home	|Linux home	            |btrfs			|Remainder	
+Mount Point	|Partition	        |Logical Volume			|Type				    |File System	|Size		
+------------|-------------------|-----------------------|-----------------------|---------------|-----------
+/mnt/boot   |/dev/partition1    |none(not encrypted)	|EFI system partition	|fat32			|1G			
+[swap]		|/dev/partition2    |/dev/MyVolGroup/swap	|Linux swap	            |swap			|16G		
+/mnt		|/dev/partition2    |/dev/MyVolGroup/root	|Linux root	            |btrfs			|200G		
+/mnt/home	|/dev/partition2    |/dev/MyVolGroup/home	|Linux home	            |btrfs			|Remainder	
 
 
 ## 1. Creating the GPT partition table
@@ -57,8 +59,8 @@ vgcreate MyVolGroup /dev/mapper/cryptlvm
 
 Create all your logical volumes on the volume group:
 ```bash
-lvcreate -L 8G MyVolGroup -n swap
-lvcreate -L 32G MyVolGroup -n root
+lvcreate -L 16G MyVolGroup -n swap
+lvcreate -L 200G MyVolGroup -n root
 lvcreate -l 100%FREE MyVolGroup -n home
 ```
 
@@ -80,13 +82,13 @@ swapon /dev/MyVolGroup/swap
 ## 4. Preparing the boot partition
 Create your file system for the boot partition:
 ```bash
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F32 /dev/partition1
 ```
 
 
 ## 5. Configuration during system install
 ### 5.1 Packages
-Install 'cryptsetup lv2'
+Install 'cryptsetup lvm2'
 
 ### 5.3 Configuring mkinitcpio
 Edit `/etc/mkinitcpio.conf` adding `encrypt lvm2` to HOOKS:

@@ -76,7 +76,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hello, \U0001F44B"
-    Content: Welcome to my website!
+    Content: Welcome to my website! Nothing really interesting here, mostly things I would like for future reference.
 
   socialIcons:
     #- name: x

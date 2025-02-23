@@ -1,7 +1,9 @@
 baseURL: 'http://holdenthomas.xyz/'
 title: Holden's Website
-paginate: 5
 theme: PaperMod
+
+pagination:
+  pagerSize: 5
 
 enableRobotsTXT: true
 buildDrafts: false
